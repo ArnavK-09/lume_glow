@@ -2,7 +2,7 @@
 layout: layout.vto
 ---
 
-# 🔥🦎 [Glow](https://nuejs.org/blog/introducing-glow/) plugin for [Lume](https://lume.land)!
+# [Glow](https://nuejs.org/blog/introducing-glow/) plugin for [Lume](https://lume.land)!
 
 ![Hero](https://nuejs.org/img/glow-light.png)
 
