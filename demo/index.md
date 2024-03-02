@@ -20,9 +20,6 @@ layout: layout.vto
 
 - **Glow is microscale:** Glow is orders of magnitude smaller than the mainstream alternatives. We're talking 5K instead of 5M. It's by far the smallest implementation available
 
----
-
-
 ```python
 ••Print••("Hello, •Glow•!")
 ```
@@ -87,7 +84,6 @@ Glow's unique, [classless design system](//nuejs.org/docs/concepts/syntax-highli
       card: Card type
 ```
 
----
 ---
 
 # 🙆 Add glow to your lume site!
