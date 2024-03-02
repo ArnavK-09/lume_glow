@@ -1,5 +1,14 @@
+// importing lume
 import lume from "lume/mod.ts";
-import plugin from "../plugin.ts";
+
+// importing plugin 
+import lume_glow from "../plugin.ts";
+
+// creating site 
 const site = lume();
-site.use(plugin());
+
+// configuring plugin 
+site.use(lume_glow());
+
+// exporting
 export default site;
