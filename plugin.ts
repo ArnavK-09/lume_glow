@@ -52,9 +52,9 @@ export default function (userOptions?: Options): Plugin {
             userOptions?.size == "nano" ? LINKS.nano : LINKS.default;
           const src = await fetch(stylesheet);
           const css = await src.text();
-          const tag = page.document!.createElement("style");
+          const tag = page.document.createElement("style");
           tag.innerHTML = css;
-          page.document!.getElementsByTagName("head")[0].appendChild(tag);
+          page.document.getElementsByTagName("head")[0].appendChild(tag);
         }
 
         // markup all codeblocks
