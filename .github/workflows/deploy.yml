@@ -2,8 +2,8 @@ name: Deploy Docs On GitHub Pages
 
 on:
   push:
-    branches:
-      - main
+    branches: ["main"]
+    paths: ["demo/**", ".github/**", "docs/**"]
 
 permissions:
   contents: read
