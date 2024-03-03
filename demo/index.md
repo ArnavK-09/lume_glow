@@ -4,8 +4,6 @@ layout: layout.vto
 
 # [Glow](https://nuejs.org/blog/introducing-glow/) plugin for [Lume](https://lume.land)!
 
-![Hero](https://nuejs.org/img/glow-light.png)
-
 ### 🔥 Lume:-
 
 - **Lume** (pronounced /lume/) is the Galician word for fire but also a static site generator for Deno.
