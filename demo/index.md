@@ -196,3 +196,7 @@ export interface Options {
   size?: "nano" | "default";
 }
 ```
+---
+
+> # [🌟 Star On Github](https://github.com/ArnavK-09/lume_glow)
+
