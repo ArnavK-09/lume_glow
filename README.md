@@ -6,12 +6,9 @@
 >
 > ## Follow these link mainly:-
 >
-> - 🌐 **Follow Website:-
->   [arnavk-09.github.io/lume_glow/](https://arnavk-09.github.io/lume_glow/)**
-> - 🔌 **Deno Plugin:-
->   [deno.land/x/lume_glow/plugin.ts](https://deno.land/x/lume_glow/plugin.ts)**
-> - 🌟 **Github Repo:-
->   [github.com/ArnavK-09/lume_glow](https://github.com/ArnavK-09/lume_glow)**
+> - 🌐 **Follow Website:- [arnavk-09.github.io/lume_glow/](https://arnavk-09.github.io/lume_glow/)**
+> - 🔌 **Deno Plugin:- [deno.land/x/lume_glow/plugin.ts](https://deno.land/x/lume_glow/plugin.ts)**
+> - 🌟 **Github Repo:- [github.com/ArnavK-09/lume_glow](https://github.com/ArnavK-09/lume_glow)**
 
 ### 🔥 Lume:-
 
