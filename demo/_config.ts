@@ -2,7 +2,7 @@
 import lume from "lume/mod.ts";
 
 // importing plugin
-import lume_glow from "../plugin.ts";
+import lume_glow from "https://deno.land/x/lume_glow/plugin.ts";
 
 // creating site
 const site = lume();

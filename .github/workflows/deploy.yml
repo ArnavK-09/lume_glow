@@ -3,7 +3,7 @@ name: Deploy Docs On GitHub Pages
 on:
   push:
     branches: ["main"]
-    paths: ["demo/**", ".github/**", "docs/**"]
+    paths: ["demo/**"]
 
 permissions:
   contents: read
@@ -19,7 +19,10 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-22.04
+    runs-on: ubuntu-22.
+    defaults:
+      run:
+        working-directory: ./demo
     steps:
       - uses: actions/checkout@v2
 
@@ -30,14 +33,13 @@ jobs:
 
       - name: Build docs site
         run: |
-          cd demo
           deno task lume
       - name: Setup Pages
         uses: actions/configure-pages@v4
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: "demo/_site"
+          path: "_site"
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4
