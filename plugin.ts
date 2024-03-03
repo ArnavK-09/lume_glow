@@ -27,7 +27,8 @@ export interface Options {
 const LINKS = {
   default:
     "https://raw.githubusercontent.com/nuejs/nue/master/packages/glow/minified/glow.css",
-  nano: "https://raw.githubusercontent.com/nuejs/nue/master/packages/glow/minified/glow.nano.css",
+  nano:
+    "https://raw.githubusercontent.com/nuejs/nue/master/packages/glow/minified/glow.nano.css",
 };
 
 /**
@@ -39,7 +40,7 @@ export default function (userOptions?: Options): Plugin {
     async function processCodeHighlight(pages: Page[]) {
       for (const page of pages) {
         const allCodeBlocks: HTMLElement[] = Array.from(
-          page.document.getElementsByTagName("code")
+          page.document.getElementsByTagName("code"),
         );
 
         // markup all codeblocks
@@ -58,15 +59,16 @@ export default function (userOptions?: Options): Plugin {
             }
           } catch (error) {
             console.log(
-              `Error glowing code block in ${page.sourcePath}: ${error}`
+              `Error glowing code block in ${page.sourcePath}: ${error}`,
             );
           }
         });
 
         // add glow styles to page
         if (Array.from(allCodeBlocks).length !== 0) {
-          const stylesheet =
-            userOptions?.size == "nano" ? LINKS.nano : LINKS.default;
+          const stylesheet = userOptions?.size == "nano"
+            ? LINKS.nano
+            : LINKS.default;
           const src = await fetch(stylesheet);
           const css = await src.text();
           const tag = page.document.createElement("style");
