@@ -147,6 +147,8 @@ pre {
 +  font-size: 1.6vh !important;
 +  max-width: 95% !important;
 +  box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
++  padding-top: 8px !important;
++  padding-bottom: 8px !important;
 }
 ```
 
