@@ -27,8 +27,7 @@ export interface Options {
 const LINKS = {
   default:
     "https://raw.githubusercontent.com/nuejs/nue/master/packages/glow/minified/glow.css",
-  nano:
-    "https://raw.githubusercontent.com/nuejs/nue/master/packages/glow/minified/glow.nano.css",
+  nano: "https://raw.githubusercontent.com/nuejs/nue/master/packages/glow/minified/glow.nano.css",
 };
 
 /**
@@ -66,9 +65,8 @@ export default function (userOptions?: Options): Plugin {
 
         // add glow styles to page
         if (Array.from(allCodeBlocks).length !== 0) {
-          const stylesheet = userOptions?.size == "nano"
-            ? LINKS.nano
-            : LINKS.default;
+          const stylesheet =
+            userOptions?.size == "nano" ? LINKS.nano : LINKS.default;
           const src = await fetch(stylesheet);
           const css = await src.text();
           const tag = page.document.createElement("style");
