@@ -1,6 +1,7 @@
 name: Deploy Docs On GitHub Pages
 
 on:
+  workflow_dispatch:
   push:
     branches: ["main"]
     paths: ["demo/**"]
@@ -19,7 +20,7 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-22.
+    runs-on: ubuntu-latest
     defaults:
       run:
         working-directory: ./demo
