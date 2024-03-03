@@ -1,51 +1,95 @@
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Glow plugin for Lume!</title>
     <link rel="icon" type="image/svg+xml" href="https://fav.farm/🌟">
+    <style>
+      ::-webkit-scrollbar {
+        height: 5px;
+        width: 3px;
+      }
+      ::-webkit-scrollbar-track {
+        background: transparent;
+        border-radius: 1rem;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #f472b6;
+        border-radius: 1rem;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #419fff;
+      }
+      
+      [glow] {
+        /* custom */
+        border-radius: 0.4rem;
+        background-color: #111729;
+
+        /* brand coloring */
+        --glow-primary-color: #7dd3fc;
+        --glow-secondary-color: #f472b6;
+        --glow-accent-color: #419fff;
+
+        /* rare case. make it "pop" */
+        --glow-special-color: #fff;
+
+        /* shades of gray */
+        --glow-char-color: #64748b;
+        --glow-comment-color: #4e5d61;
+        --glow-counter-color: #475569;
+
+        /* selection color */
+        --glow-selected-color: #2dd4bf26;
+      }
+
+      body {
+        display: grid;
+        background-color: #111729f0;
+        color: white;
+        place-items: center;
+        padding: 1rem;
+        margin: 4px !important;
+        font-family: Arial, Helvetica, sans-serif;
+        margin-bottom: 2rem;
+        overflow-wrap: break-word; 
+        {{# font-size: 1rem;  #}}
+        div {
+          margin-left: auto;
+          margin-right: auto;
+        }
+      }
+      hr {
+        margin: 0.7rem 1rem;
+        height: 0.09rem;
+        opacity: 0.59;
+        background: black;
+      }
+      h1 {
+        font-weight: 700; 
+        text-align: center; 
+        {{# font-size: 1.2rem !important; #}}
+        text-decoration: underline; 
+        text-underline-offset: 8px;
+      }
+      a {
+        color: currentColor;
+        text-decoration: underline; 
+        text-underline-offset: 2px; 
+        opacity: 0.8;
+      }
+      pre {
+        font-size: 1.6vh !important;
+        max-width: 95% !important;
+        box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
+      }
+    </style>
 </head>
 <body>
     <div>
       {{ content }}
     </div>
 </body>
-<style>
-  body {
-    display: grid;
-    place-items: center;
-    padding: 1rem;
-    font-family: Arial, Helvetica, sans-serif;
-    margin-bottom: 2rem;
-    overflow-wrap: break-word; 
-    font-size: 1rem; 
-    div {
-      margin-left: auto;
-      margin-right: auto;
-    }
-  }
-  hr {
-    margin: 0.7rem 1rem;
-    height: 0.09rem;
-    opacity: 0.59;
-    background: black;
-  }
-  h1 {
-    font-weight: 700; 
-    text-align: center; 
-    font-size: 1.2rem !important;
-    text-decoration: underline; 
-    text-underline-offset: 8px;
-  }
-  a {
-    color: currentColor;
-    text-decoration: underline; 
-    text-underline-offset: 2px; 
-  }
-  pre {
-    font-size: 1rem !important;
-    box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04);
-  }
-</style>
 </html>

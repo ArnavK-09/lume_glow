@@ -18,11 +18,7 @@ export interface Options {
   /**
    * configure package size for glow styles
    */
-  size: "nano" | "default";
-  /**
-   * the list of extensions this plugin applies to
-   */
-  extensions?: Array<string>;
+  size?: "nano" | "default";
 }
 
 /**
@@ -39,29 +35,18 @@ const LINKS = {
  */
 export default function (userOptions?: Options): Plugin {
   return (site: Site) => {
-    site.process(userOptions?.extensions ?? [".html"], processCodeHighlight);
+    site.process([".html"], processCodeHighlight);
     async function processCodeHighlight(pages: Page[]) {
       for (const page of pages) {
-        // @ts-ignore
-        const allCodeBlocks =
-          page.document.querySelectorAll<HTMLElement>("pre code");
-
-        // add glow styles to page
-        if (Array.from(allCodeBlocks).length !== 0) {
-          const stylesheet =
-            userOptions?.size == "nano" ? LINKS.nano : LINKS.default;
-          const src = await fetch(stylesheet);
-          const css = await src.text();
-          const tag = page.document.createElement("style");
-          tag.innerHTML = css;
-          page.document.getElementsByTagName("head")[0].appendChild(tag);
-        }
+        const allCodeBlocks: HTMLElement[] = Array.from(
+          page.document.getElementsByTagName("code")
+        );
 
         // markup all codeblocks
         allCodeBlocks.forEach((element: HTMLElement) => {
           try {
             let language;
-            if (element.classList[0].includes("language-")) {
+            if (Array.from(element.classList)[0]?.includes("language-")) {
               language = element.classList[0].replace("language-", "");
             }
             if (element.parentElement?.tagName == "PRE") {
@@ -73,10 +58,21 @@ export default function (userOptions?: Options): Plugin {
             }
           } catch (error) {
             console.log(
-              `Error glowing code block in ${page.sourcePath}: ${error}`,
+              `Error glowing code block in ${page.sourcePath}: ${error}`
             );
           }
         });
+
+        // add glow styles to page
+        if (Array.from(allCodeBlocks).length !== 0) {
+          const stylesheet =
+            userOptions?.size == "nano" ? LINKS.nano : LINKS.default;
+          const src = await fetch(stylesheet);
+          const css = await src.text();
+          const tag = page.document.createElement("style");
+          tag.innerHTML = css + `pre { overflow-x: auto }`;
+          page.document.getElementsByTagName("head")[0].appendChild(tag);
+        }
       }
     }
   };
