@@ -28,6 +28,10 @@ layout: layout.vto
 ••Print••("Hello, •Glow•!")
 ```
 
+```html
+<h1> Hello, World! </h1>
+```
+
 ---
 
 # 🌶️ Glow Demo with Lume!
