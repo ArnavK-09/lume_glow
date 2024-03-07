@@ -51,7 +51,7 @@ export default function (userOptions?: Options): Plugin {
             }
             if (element.parentElement?.tagName == "PRE") {
               element.parentElement!.setAttribute("glow", "");
-              element.parentElement!.innerHTML = glow(element.innerHTML, {
+              element.parentElement!.innerHTML = glow(element.innerText, {
                 language: userOptions?.language ?? language,
                 numbered: userOptions?.numbered,
               });

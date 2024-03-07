@@ -29,7 +29,7 @@ layout: layout.vto
 ```
 
 ```html
-<h1> Hello, World! </h1>
+<h1>Hello, World!</h1>
 ```
 
 ---
@@ -200,7 +200,7 @@ export interface Options {
   size?: "nano" | "default";
 }
 ```
+
 ---
 
 > # [🌟 Star On Github](https://github.com/ArnavK-09/lume_glow)
-
