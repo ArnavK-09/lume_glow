@@ -52,9 +52,9 @@ const site = lume(); // creating lume site
 site.use(lume_glow()); // adding glow plugin
 ```
 
-### 3. Customize your code!
+### 3. Customize your design!
 
-> **[...Read More Here...](https://nuejs.org/docs/concepts/syntax-highlighting.html#system)**
+> **[...Read More Here...](https://nuejs.org/docs/concepts/syntax-highlighting.html#css-variable-reference)**
 
 ---
 
